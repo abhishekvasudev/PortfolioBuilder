@@ -917,6 +917,14 @@ input[type="number"].input-hide-arrows {
     scroll-snap-type: x proximity;
     scrollbar-width: none
     }
+/* Prevent items in layout-content from expanding the grid off-screen */
+.layout-content {
+    min-width: 0
+    }
+/* But allow children in a layout-margin-scrollable to expand */
+.layout-margin-scrollable > * {
+    min-width: auto
+    }
 /**
  * [Legacy] PageViewBlock.renderPageHeader() renders gray borders between
  * detailSections, and a bottom gray border if the list is non-empty.
